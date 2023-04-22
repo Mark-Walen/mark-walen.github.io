@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>任务 | Blue Monster</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="icon" href="/favicon.ico">
+    <link rel="manifest" href="/manifest.webmanifest">
+    <link rel="apple-touch-icon" href="/icons/apple-touch-icon-152x152.png">
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#1e2d51">
+    <meta name="description" content="本文是对 ti rtos 官方文档的翻译">
+    <meta name="author" content="Mark Walen">
+    <meta name="keywords" content="蓝芒小栈,Blue Monster,嵌入式软件,STM32,C 语言,数据结构">
+    <meta name="theme-color" content="#1e2d51">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="msapplication-TileImage" content="/icons/msapplication-icon-144x144.png">
+    <meta name="msapplication-TileColor" content="#000000">
+    
+    <link rel="preload" href="/assets/css/0.styles.ec95ac3a.css" as="style"><link rel="preload" href="/assets/js/app.7099126a.js" as="script"><link rel="preload" href="/assets/js/2.0bcf0fe5.js" as="script"><link rel="preload" href="/assets/js/18.8d0f809c.js" as="script"><link rel="preload" href="/assets/js/3.94c01751.js" as="script"><link rel="prefetch" href="/assets/js/10.e91b63fd.js"><link rel="prefetch" href="/assets/js/11.a760ca5e.js"><link rel="prefetch" href="/assets/js/12.6771515a.js"><link rel="prefetch" href="/assets/js/13.3487e202.js"><link rel="prefetch" href="/assets/js/14.2de6dedc.js"><link rel="prefetch" href="/assets/js/15.e86c1792.js"><link rel="prefetch" href="/assets/js/16.63d2bce2.js"><link rel="prefetch" href="/assets/js/17.ef560323.js"><link rel="prefetch" href="/assets/js/19.6b8bc6e3.js"><link rel="prefetch" href="/assets/js/20.16926133.js"><link rel="prefetch" href="/assets/js/21.b44ed802.js"><link rel="prefetch" href="/assets/js/22.682adcb3.js"><link rel="prefetch" href="/assets/js/23.0ce98934.js"><link rel="prefetch" href="/assets/js/24.92c8f8ce.js"><link rel="prefetch" href="/assets/js/25.844a5f79.js"><link rel="prefetch" href="/assets/js/26.27a722db.js"><link rel="prefetch" href="/assets/js/27.2667b260.js"><link rel="prefetch" href="/assets/js/28.822608a4.js"><link rel="prefetch" href="/assets/js/4.07fc0971.js"><link rel="prefetch" href="/assets/js/5.1ed8e759.js"><link rel="prefetch" href="/assets/js/6.e86380d3.js"><link rel="prefetch" href="/assets/js/7.2a955bf9.js"><link rel="prefetch" href="/assets/js/8.2d140ac7.js"><link rel="prefetch" href="/assets/js/9.2e62f1e7.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.ec95ac3a.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Blue Monster</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Programming" class="dropdown-title"><span class="title">编程基础</span> <span class="arrow down"></span></button> <button type="button" aria-label="Programming" class="mobile-dropdown-title"><span class="title">编程基础</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/program/c/" class="nav-link">
+  C 语言程序设计
+</a></li><li class="dropdown-item"><!----> <a href="/program/data-structure/" class="nav-link">
+  数据结构
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Embedded System" class="dropdown-title"><span class="title">嵌入式系统</span> <span class="arrow down"></span></button> <button type="button" aria-label="Embedded System" class="mobile-dropdown-title"><span class="title">嵌入式系统</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          BLE5 Stack
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/embedded-system/ble5-stack/ti-rtos/" class="nav-link router-link-active">
+  TI-RTOS
+</a></li></ul></li><li class="dropdown-item"><!----> <a href="/embedded-system/ecp/" class="nav-link">
+  电子通信协议
+</a></li><li class="dropdown-item"><!----> <a href="/embedded-system/stm32/stm32-learning-process.html" class="nav-link">
+  STM32 入门学习
+</a></li></ul></div></div><div class="nav-item"><a href="/resources.html" class="nav-link">
+  资源领取
+</a></div><div class="nav-item"><a href="https://dev.ti.com/tirex/explore/node?node=AAliBv1MZ54NaV.m2AIT8w__krol.2c__LATEST" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  TI Resource Explorer
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Programming" class="dropdown-title"><span class="title">编程基础</span> <span class="arrow down"></span></button> <button type="button" aria-label="Programming" class="mobile-dropdown-title"><span class="title">编程基础</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/program/c/" class="nav-link">
+  C 语言程序设计
+</a></li><li class="dropdown-item"><!----> <a href="/program/data-structure/" class="nav-link">
+  数据结构
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Embedded System" class="dropdown-title"><span class="title">嵌入式系统</span> <span class="arrow down"></span></button> <button type="button" aria-label="Embedded System" class="mobile-dropdown-title"><span class="title">嵌入式系统</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          BLE5 Stack
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/embedded-system/ble5-stack/ti-rtos/" class="nav-link router-link-active">
+  TI-RTOS
+</a></li></ul></li><li class="dropdown-item"><!----> <a href="/embedded-system/ecp/" class="nav-link">
+  电子通信协议
+</a></li><li class="dropdown-item"><!----> <a href="/embedded-system/stm32/stm32-learning-process.html" class="nav-link">
+  STM32 入门学习
+</a></li></ul></div></div><div class="nav-item"><a href="/resources.html" class="nav-link">
+  资源领取
+</a></div><div class="nav-item"><a href="https://dev.ti.com/tirex/explore/node?node=AAliBv1MZ54NaV.m2AIT8w__krol.2c__LATEST" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  TI Resource Explorer
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>TI-RTOS</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/embedded-system/ble5-stack/ti-rtos/" aria-current="page" class="sidebar-link">线程模块</a></li><li><a href="/embedded-system/ble5-stack/ti-rtos/kernel_configuration.html" class="sidebar-link">内核配置</a></li><li><a href="/embedded-system/ble5-stack/ti-rtos/creating_vs_constructing.html" class="sidebar-link">创建 vs 构造</a></li><li><a href="/embedded-system/ble5-stack/ti-rtos/thread_synchronization.html" class="sidebar-link">线程同步</a></li><li><a href="/embedded-system/ble5-stack/ti-rtos/queues.html" class="sidebar-link">队列</a></li><li><a href="/embedded-system/ble5-stack/ti-rtos/tasks.html" aria-current="page" class="active sidebar-link">任务</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/embedded-system/ble5-stack/ti-rtos/tasks.html#初始化任务" class="sidebar-link">初始化任务</a></li><li class="sidebar-sub-header"><a href="/embedded-system/ble5-stack/ti-rtos/tasks.html#任务函数" class="sidebar-link">任务函数</a></li></ul></li><li><a href="/embedded-system/ble5-stack/ti-rtos/clocks.html" class="sidebar-link">时钟</a></li><li><a href="/embedded-system/ble5-stack/ti-rtos/power_management.html" class="sidebar-link">功耗管理</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><p>TI-RTOS 任务在概念上等同于在单个 C 程序中并行执行函数的独立线程。实际上，将处理器从一项任务切换到另一项任务有助于实现并发。每个任务始终处于以下执行模式之一：</p> <ul><li><strong>执行</strong>：任务当前正在运行</li> <li><strong>就绪</strong>： 任务被安排执行</li> <li><strong>阻塞</strong>：任务暂停执行</li> <li><strong>停止</strong>：任务执行完成后，进入终止状态</li> <li><strong>静止</strong>：任务在非活动列表中</li></ul> <p>一个（并且只有一个）任务始终在运行，即使它只是空闲任务（参见<a href="/embedded-system/ble5-stack/ti-rtos/#figure-40">图 40</a>）。当前运行的任务可以通过调用某些任务模块函数以及其他模块（如信号量）提供的函数来阻止执行。当前任务也可以自行终止。在任何一种情况下，处理器都会切换到准备运行的最高优先级任务。有关这些功能的更多信息，请参阅 <a href="https://dev.ti.com/tirex/explore/content/simplelink_cc2640r2_sdk_5_30_00_03/docs/tirtos/sysbios/docs/Bios_User_Guide.pdf" target="_blank" rel="noopener noreferrer">TI-RTOS 内核 (SYS/BIOS) 用户指南<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>的包 <code>ti.sysbios.knl</code> 部分中的任务模块。</p> <p>数字优先级分配给任务，多个任务可以具有相同的优先级。任务已准备好按从高到低的优先级执行；相同优先级的任务按到达顺序安排。当前正在运行的任务的优先级永远不会低于任何就绪任务的优先级。当有更高优先级的就绪任务时，正在运行的任务将被抢占并重新安排执行。</p> <p>在 simple_peripheral 应用程序中，低功耗蓝牙协议栈任务被赋予最高优先级 (5)，而应用程序任务被赋予最低优先级 (1)。</p> <h2 id="初始化任务"><a href="#初始化任务" class="header-anchor">#</a> 初始化任务</h2> <p>当任务被初始化时，它有自己的运行时堆栈，用于存储局部变量以及函数调用的进一步嵌套。在单个程序中执行的所有任务共享一组通用的全局变量，根据 C 函数作用域的标准规则进行访问。这套记忆就是任务的上下文。以下是正在构建的应用程序任务的示例。</p> <center><span id="listing-13">清单 13. 一个 TI-RTOS 任务</span></center><br> <div class="language-c extra-class"><pre class="language-c"><code><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;xdc/std.h&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;ti/sysbios/BIOS.h&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;ti/sysbios/knl/Task.h&gt;</span></span>
+
+<span class="token comment">/* Task's stack */</span>
+<span class="token class-name">uint8_t</span> sbcTaskStack<span class="token punctuation">[</span>TASK_STACK_SIZE<span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+<span class="token comment">/* Task object (to be constructed) */</span>
+Task_Struct task0<span class="token punctuation">;</span>
+
+<span class="token comment">/* Task function */</span>
+<span class="token keyword">void</span> <span class="token function">taskFunction</span><span class="token punctuation">(</span>UArg arg0<span class="token punctuation">,</span> UArg arg1<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token comment">/* Local variables. Variables here go onto task stack!! */</span>
+
+    <span class="token comment">/* Run one-time code when task starts */</span>
+
+    <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token comment">/* Run loop forever (unless terminated) */</span>
+    <span class="token punctuation">{</span>
+        <span class="token comment">/*
+         * Block on a signal or for a duration. Examples:
+         *  ``Sempahore_pend()``
+         *  ``Event_pend()``
+         *  ``Task_sleep()``
+         *
+         * &quot;Process data&quot;
+         */</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+    Task_Params taskParams<span class="token punctuation">;</span>
+
+    <span class="token comment">// Configure task</span>
+    <span class="token function">Task_Params_init</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>taskParams<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    taskParams<span class="token punctuation">.</span>stack <span class="token operator">=</span> sbcTaskStack<span class="token punctuation">;</span>
+    taskParams<span class="token punctuation">.</span>stackSize <span class="token operator">=</span> TASK_STACK_SIZE<span class="token punctuation">;</span>
+    taskParams<span class="token punctuation">.</span>priority <span class="token operator">=</span> TASK_PRIORITY<span class="token punctuation">;</span>
+
+    <span class="token function">Task_construct</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>task0<span class="token punctuation">,</span> taskFunction<span class="token punctuation">,</span> <span class="token operator">&amp;</span>taskParams<span class="token punctuation">,</span> <span class="token constant">NULL</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token function">BIOS_start</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>在 <code>BIOS_start()</code> 启动 TI-RTOS 内核的调度程序之前，任务创建在 <code>main()</code>函数中完成。调度程序启动后，任务将以指定的优先级执行。</p> <p>TI 建议使用现有的应用程序任务进行特定于应用程序的处理。将附加任务添加到应用程序项目时，必须在 TI-RTOS 优先级范围内为任务的优先级分配优先级，该范围在 TI-RTOS 配置文件 (<code>.cfg</code>) 中定义。</p> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>减少任务优先级的数量以获得 TI-RTOS 配置文件 (.cfg) 中的额外 RAM 节省：</p> <p><code>Task.numPriorities = 6;</code></p></div> <p>不要添加优先级等于或高于蓝牙低功耗协议栈任务和相关支持任务的任务。有关系统任务层次结构的详细信息，请参阅<a href="https://dev.ti.com/tirex/explore/content/simplelink_cc2640r2_sdk_5_30_00_03/docs/ble5stack/ble_user_guide/html/ble-stack-tirtos/tasks.html#initializing-a-task" target="_blank" rel="noopener noreferrer">标准项目任务层次结构<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>。</p> <p>确保任务的最小任务堆栈大小为 512 字节的预定义内存。至少，每个堆栈必须足够大以处理正常的子例程调用和一个任务抢占上下文。任务抢占上下文是当一个任务由于中断线程准备更高优先级任务而抢占另一个任务时保存的上下文。使用 IDE 的 TI-RTOS 分析工具，可以分析任务以确定峰值任务堆栈使用情况。</p> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>术语<em>创建</em>描述了任务的实例化。实际的 TI-RTOS 方法是构建任务。有关构建 TI-RTOS 对象的详细信息，请参阅<a href="./creating_vs_constructing">创建 vs 构造</a>。</p></div> <h2 id="任务函数"><a href="#任务函数" class="header-anchor">#</a> 任务函数</h2> <p>当一个任务被初始化时，一个指向任务函数的函数指针被传递给 <code>Task_construct</code> 函数。当任务第一次有机会处理时，这是 TI-RTOS 运行的函数。<a href="#listing-13">清单 13</a>. 显示了这个 Task 函数的一般拓扑结构。在典型的用例中，任务大部分时间都处于阻塞状态，它会调用 <code>_pend()</code> API，例如 <code>Semaphore_pend()</code>。通常，高优先级线程（例如 Hwis 或 Swis）使用 <code>_post()</code> API（例如 <code>Semaphore_post()</code>）解除任务阻塞。</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/embedded-system/ble5-stack/ti-rtos/queues.html" class="prev">
+        队列
+      </a></span> <span class="next"><a href="/embedded-system/ble5-stack/ti-rtos/clocks.html">
+        时钟
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----><div class="kanbanniang" data-v-5775ee02><div class="banniang-container" style="display:;" data-v-5775ee02><div class="messageBox" style="right:68px;bottom:190px;display:none;" data-v-5775ee02>
+      欢迎来到 Blue Monster
+    </div> <div class="operation" style="right:90px;bottom:40px;display:;" data-v-5775ee02><i class="kbnfont kbn-ban-home ban-home" data-v-5775ee02></i> <i class="kbnfont kbn-ban-message message" data-v-5775ee02></i> <i class="kbnfont kbn-ban-close close" data-v-5775ee02></i> <a target="_blank" href="https://vuepress-theme-reco.recoluan.com/views/plugins/kanbanniang.html" data-v-5775ee02><i class="kbnfont kbn-ban-info info" data-v-5775ee02></i></a> <i class="kbnfont kbn-ban-theme skin" style="display:;" data-v-5775ee02></i></div> <canvas id="banniang" width="150" height="220" class="live2d" style="right:90px;bottom:-20px;opacity:0.9;" data-v-5775ee02></canvas></div> <div class="showBanNiang" style="display:none;" data-v-5775ee02>
+    看板娘
+  </div></div><div class="reco-bgm-panel" data-v-b1d3339e><audio id="bgm" src="/assets/music/Anson Seabra - Last Time.mp3" data-v-b1d3339e></audio> <div class="reco-float-box" style="bottom:30px;z-index:999999;display:none;" data-v-b1d3339e data-v-41bcba48 data-v-b1d3339e><img src="/assets/img/cover/last-time.jpg" data-v-b1d3339e></div> <div class="reco-bgm-box" style="left:10px;bottom:10px;z-index:999999;" data-v-b1d3339e data-v-41bcba48 data-v-b1d3339e><div class="reco-bgm-cover" style="background-image:url(/assets/img/cover/last-time.jpg);" data-v-b1d3339e><div class="mini-operation" style="display:none;" data-v-b1d3339e><i class="reco-bgm reco-bgm-pause" style="display:none;" data-v-b1d3339e></i> <i class="reco-bgm reco-bgm-play" style="display:none;" data-v-b1d3339e></i></div> <div class="falut-message" style="display:none;" data-v-b1d3339e>
+          播放失败
+        </div></div> <div class="reco-bgm-info" data-v-b1d3339e data-v-41bcba48 data-v-b1d3339e><div class="info-box" data-v-b1d3339e><i class="reco-bgm reco-bgm-music music" data-v-b1d3339e></i>Last Time</div> <div class="info-box" data-v-b1d3339e><i class="reco-bgm reco-bgm-artist" data-v-b1d3339e></i>Anson Seabra</div> <div class="reco-bgm-progress" data-v-b1d3339e><div class="progress-bar" data-v-b1d3339e><div class="bar" data-v-b1d3339e></div></div></div> <div class="reco-bgm-operation" data-v-b1d3339e><i class="reco-bgm reco-bgm-last last" data-v-b1d3339e></i> <i class="reco-bgm reco-bgm-pause pause" style="display:none;" data-v-b1d3339e></i> <i class="reco-bgm reco-bgm-play play" data-v-b1d3339e></i> <i class="reco-bgm reco-bgm-next next" data-v-b1d3339e></i> <i class="reco-bgm reco-bgm-volume1 volume" data-v-b1d3339e></i> <i class="reco-bgm reco-bgm-mute mute" style="display:none;" data-v-b1d3339e></i> <div class="volume-bar" data-v-b1d3339e><div class="bar" data-v-b1d3339e></div></div></div></div> <div class="reco-bgm-left-box" data-v-b1d3339e data-v-41bcba48 data-v-b1d3339e><i class="reco-bgm reco-bgm-left" data-v-b1d3339e></i></div></div></div><!----><div id="vuepress-party-cursor" data-v-16fbd2e9></div></div></div>
+    <script src="/assets/js/app.7099126a.js" defer></script><script src="/assets/js/2.0bcf0fe5.js" defer></script><script src="/assets/js/18.8d0f809c.js" defer></script><script src="/assets/js/3.94c01751.js" defer></script>
+  </body>
+</html>

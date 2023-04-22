@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>STM32 Learning Process | Blue Monster</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="icon" href="/favicon.ico">
+    <link rel="manifest" href="/manifest.webmanifest">
+    <link rel="apple-touch-icon" href="/icons/apple-touch-icon-152x152.png">
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#1e2d51">
+    <meta name="description" content="在此小栈喝盏茶，小憩片刻，汲取知识。">
+    <meta name="author" content="Mark Walen">
+    <meta name="keywords" content="蓝芒小栈,Blue Monster,嵌入式软件,STM32,C 语言,数据结构">
+    <meta name="theme-color" content="#1e2d51">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="msapplication-TileImage" content="/icons/msapplication-icon-144x144.png">
+    <meta name="msapplication-TileColor" content="#000000">
+    
+    <link rel="preload" href="/assets/css/0.styles.ec95ac3a.css" as="style"><link rel="preload" href="/assets/js/app.7099126a.js" as="script"><link rel="preload" href="/assets/js/2.0bcf0fe5.js" as="script"><link rel="preload" href="/assets/js/21.b44ed802.js" as="script"><link rel="preload" href="/assets/js/3.94c01751.js" as="script"><link rel="prefetch" href="/assets/js/10.e91b63fd.js"><link rel="prefetch" href="/assets/js/11.a760ca5e.js"><link rel="prefetch" href="/assets/js/12.6771515a.js"><link rel="prefetch" href="/assets/js/13.3487e202.js"><link rel="prefetch" href="/assets/js/14.2de6dedc.js"><link rel="prefetch" href="/assets/js/15.e86c1792.js"><link rel="prefetch" href="/assets/js/16.63d2bce2.js"><link rel="prefetch" href="/assets/js/17.ef560323.js"><link rel="prefetch" href="/assets/js/18.8d0f809c.js"><link rel="prefetch" href="/assets/js/19.6b8bc6e3.js"><link rel="prefetch" href="/assets/js/20.16926133.js"><link rel="prefetch" href="/assets/js/22.682adcb3.js"><link rel="prefetch" href="/assets/js/23.0ce98934.js"><link rel="prefetch" href="/assets/js/24.92c8f8ce.js"><link rel="prefetch" href="/assets/js/25.844a5f79.js"><link rel="prefetch" href="/assets/js/26.27a722db.js"><link rel="prefetch" href="/assets/js/27.2667b260.js"><link rel="prefetch" href="/assets/js/28.822608a4.js"><link rel="prefetch" href="/assets/js/4.07fc0971.js"><link rel="prefetch" href="/assets/js/5.1ed8e759.js"><link rel="prefetch" href="/assets/js/6.e86380d3.js"><link rel="prefetch" href="/assets/js/7.2a955bf9.js"><link rel="prefetch" href="/assets/js/8.2d140ac7.js"><link rel="prefetch" href="/assets/js/9.2e62f1e7.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.ec95ac3a.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Blue Monster</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Programming" class="dropdown-title"><span class="title">编程基础</span> <span class="arrow down"></span></button> <button type="button" aria-label="Programming" class="mobile-dropdown-title"><span class="title">编程基础</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/program/c/" class="nav-link">
+  C 语言程序设计
+</a></li><li class="dropdown-item"><!----> <a href="/program/data-structure/" class="nav-link">
+  数据结构
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Embedded System" class="dropdown-title"><span class="title">嵌入式系统</span> <span class="arrow down"></span></button> <button type="button" aria-label="Embedded System" class="mobile-dropdown-title"><span class="title">嵌入式系统</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          BLE5 Stack
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/embedded-system/ble5-stack/ti-rtos/" class="nav-link">
+  TI-RTOS
+</a></li></ul></li><li class="dropdown-item"><!----> <a href="/embedded-system/ecp/" class="nav-link">
+  电子通信协议
+</a></li><li class="dropdown-item"><!----> <a href="/embedded-system/stm32/stm32-learning-process.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  STM32 入门学习
+</a></li></ul></div></div><div class="nav-item"><a href="/resources.html" class="nav-link">
+  资源领取
+</a></div><div class="nav-item"><a href="https://dev.ti.com/tirex/explore/node?node=AAliBv1MZ54NaV.m2AIT8w__krol.2c__LATEST" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  TI Resource Explorer
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Programming" class="dropdown-title"><span class="title">编程基础</span> <span class="arrow down"></span></button> <button type="button" aria-label="Programming" class="mobile-dropdown-title"><span class="title">编程基础</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/program/c/" class="nav-link">
+  C 语言程序设计
+</a></li><li class="dropdown-item"><!----> <a href="/program/data-structure/" class="nav-link">
+  数据结构
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Embedded System" class="dropdown-title"><span class="title">嵌入式系统</span> <span class="arrow down"></span></button> <button type="button" aria-label="Embedded System" class="mobile-dropdown-title"><span class="title">嵌入式系统</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          BLE5 Stack
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/embedded-system/ble5-stack/ti-rtos/" class="nav-link">
+  TI-RTOS
+</a></li></ul></li><li class="dropdown-item"><!----> <a href="/embedded-system/ecp/" class="nav-link">
+  电子通信协议
+</a></li><li class="dropdown-item"><!----> <a href="/embedded-system/stm32/stm32-learning-process.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  STM32 入门学习
+</a></li></ul></div></div><div class="nav-item"><a href="/resources.html" class="nav-link">
+  资源领取
+</a></div><div class="nav-item"><a href="https://dev.ti.com/tirex/explore/node?node=AAliBv1MZ54NaV.m2AIT8w__krol.2c__LATEST" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  TI Resource Explorer
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Stm32</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/embedded-system/stm32/stm32-learning-process.html" aria-current="page" class="active sidebar-link">STM32 Learning Process</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/embedded-system/stm32/stm32-learning-process.html#安装-stm32cubeide" class="sidebar-link">安装 STM32CubeIDE</a></li><li class="sidebar-sub-header"><a href="/embedded-system/stm32/stm32-learning-process.html#使用-stm32cubeide-创建一个项目" class="sidebar-link">使用 STM32CubeIDE 创建一个项目</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/embedded-system/stm32/stm32-learning-process.html#stm32-项目目录结构" class="sidebar-link">STM32 项目目录结构</a></li></ul></li><li class="sidebar-sub-header"><a href="/embedded-system/stm32/stm32-learning-process.html#快速开始" class="sidebar-link">快速开始</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/embedded-system/stm32/stm32-learning-process.html#点亮一个-led-灯" class="sidebar-link">点亮一个 LED 灯</a></li></ul></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="stm32-learning-process"><a href="#stm32-learning-process" class="header-anchor">#</a> STM32 Learning Process</h1> <h2 id="安装-stm32cubeide"><a href="#安装-stm32cubeide" class="header-anchor">#</a> 安装 STM32CubeIDE</h2> <h2 id="使用-stm32cubeide-创建一个项目"><a href="#使用-stm32cubeide-创建一个项目" class="header-anchor">#</a> 使用 STM32CubeIDE 创建一个项目</h2> <ol><li><p>点击 Toolbar 中的 File，然后将鼠标悬浮在 New 那一项，选择 STM32 Project。</p> <p><img src="/assets/img/stm32/create_project.png" alt=""></p></li> <li><p>初次创建时，会自动下载相关的 SDK 和一些其他的依赖（stm32cube_fw_f4_v1270、stm32cube_fw_f4_v1271），包括驱动、以及第三方中间件（如 free-rtos）。</p></li> <li><p>选择 MCU：根据自己芯片的特性可以很快地筛选出自己所用的 MCU。下图的左侧边栏是筛选条件，在 Commercial Part Number 输入自己使用的 MCU 型号。</p> <p><img src="/assets/img/stm32/Select_Board.png" alt="image-20220811003052482"></p></li> <li><p>在右侧视图的下面选择自己的 MCU，然后点击 next，输入 Project 名称，点击 FInish，一个 STM32 项目就创建完成了。</p></li></ol> <h3 id="stm32-项目目录结构"><a href="#stm32-项目目录结构" class="header-anchor">#</a> STM32 项目目录结构</h3> <ol><li>STM32 项目目录结构如下</li></ol> <div class="language-path extra-class"><pre class="language-text"><code>─Test_ADXL346
+    ├─.settings
+    ├─Core
+    │  ├─Inc
+    │  ├─Src
+    │  └─Startup
+    ├─Debug
+    │  ├─Core
+    │  │  ├─Src
+    │  │  └─Startup
+    │  └─Drivers
+    │      └─STM32F4xx_HAL_Driver
+    │          └─Src
+    └─Drivers
+        ├─CMSIS
+        │  ├─Device
+        │  │  └─ST
+        │  │      └─STM32F4xx
+        │  │          ├─Include
+        │  │          └─Source
+        │  │              └─Templates
+        │  └─Include
+        └─STM32F4xx_HAL_Driver
+            ├─Inc
+            │  └─Legacy
+            └─Src
+</code></pre></div><ol start="2"><li><p>根据自己所了解的情况进行一些简单说明，主要是 Core 文件夹：</p> <div class="language-path extra-class"><pre class="language-text"><code>-─Core
+   ├─Inc
+   │      main.h
+   │      stm32f4xx_hal_conf.h
+   │      stm32f4xx_it.h
+   │
+   ├─Src
+   │      main.c
+   │      stm32f4xx_hal_msp.c
+   │      stm32f4xx_it.c
+   │      syscalls.c
+   │      sysmem.c
+   │      system_stm32f4xx.c
+   │
+   └─Startup
+           startup_stm32f411retx.s
+</code></pre></div><ol><li>Inc 文件夹是一些头文件目录</li> <li>Src 文件夹是 .c 文件所在目录，包含了整个程序的启动文件 main.c。</li></ol></li> <li><p>Drivers 文件夹</p> <div class="language-markdown extra-class"><pre class="language-markdown"><code>-─Drivers
+   ├─CMSIS
+   │  ├─Device
+   │  │  └─ST
+   │  │      └─STM32F4xx
+   │  │          ├─Include
+   │  │          └─Source
+   │  │              └─Templates
+   │  └─Include
+   └─STM32F4xx_HAL_Driver
+       ├─Inc
+       │  └─Legacy
+       └─Src
+</code></pre></div><ol><li>STM32F4xx_HAL_Driver/Inc 目录中是程序可能会使用到的驱动的头文件，STM32F4xx_HAL_Driver/Src 为相对应的源文件（.c 文件）。</li></ol></li></ol> <h2 id="快速开始"><a href="#快速开始" class="header-anchor">#</a> 快速开始</h2> <h3 id="点亮一个-led-灯"><a href="#点亮一个-led-灯" class="header-anchor">#</a> 点亮一个 LED 灯</h3> <ol><li><p>准备工作：查看 Drivers/STM32F4xx_HAL_Driver/Inc 目录下是否存在 <code>stm32f4xx_hal_gpio.h</code> 驱动文件</p> <ol><li><p>如果存在则执行下一步</p></li> <li><p>如果没有</p> <ol><li>从 <code>STM32Cube_FW_F4_V1.27.1/Drivers/STM32F4xx_HAL_Driver/Inc</code> 目录下找到并添加至项目文件夹<code>Drivers/STM32F4xx_HAL_Driver/Inc</code>中。<mark>Tips：</mark> STM32Cube_FW_F4_V1.27.1 文件夹所在位置如下图所示：在用户根目录的 <code>STM32Cube/Repository</code> 目录下</li></ol> <p><img src="/assets/img/stm32/path.png" alt=""></p> <ol start="2"><li><p>找到启用 GPIO 的配置头文件 <code>Cores/Inc/stm32f4xx_hal_conf.h</code>：</p> <p>然后检索到如下代码位置，将<code>#define HAL_GPIO_MODULE_ENABLED</code>的注释去掉，或者在定义的末尾直接添加。</p> <div class="language-c extra-class"><pre class="language-c"><code><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">HAL_MODULE_ENABLED</span></span>
+
+<span class="token comment">/* #define HAL_ADC_MODULE_ENABLED   */</span>
+<span class="token comment">/* #define HAL_CRYP_MODULE_ENABLED   */</span>
+<span class="token comment">/* #define HAL_CAN_MODULE_ENABLED   */</span>
+<span class="token comment">/* #define HAL_CRC_MODULE_ENABLED   */</span>
+<span class="token comment">/* #define HAL_CAN_LEGACY_MODULE_ENABLED   */</span>
+<span class="token comment">/* #define HAL_CRYP_MODULE_ENABLED   */</span>
+<span class="token comment">/* #define HAL_DAC_MODULE_ENABLED   */</span>
+<span class="token comment">/* #define HAL_DCMI_MODULE_ENABLED   */</span>
+<span class="token comment">/* #define HAL_DMA2D_MODULE_ENABLED   */</span>
+<span class="token comment">/* #define HAL_ETH_MODULE_ENABLED   */</span>
+<span class="token comment">/* #define HAL_NAND_MODULE_ENABLED   */</span>
+<span class="token comment">/* #define HAL_NOR_MODULE_ENABLED   */</span>
+<span class="token comment">/* #define HAL_PCCARD_MODULE_ENABLED   */</span>
+<span class="token comment">/* #define HAL_SRAM_MODULE_ENABLED   */</span>
+<span class="token comment">/* #define HAL_SDRAM_MODULE_ENABLED   */</span>
+<span class="token comment">/* #define HAL_HASH_MODULE_ENABLED   */</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">HAL_I2C_MODULE_ENABLED</span></span>
+<span class="token comment">/* #define HAL_I2S_MODULE_ENABLED   */</span>
+<span class="token comment">/* #define HAL_IWDG_MODULE_ENABLED   */</span>
+<span class="token comment">/* #define HAL_LTDC_MODULE_ENABLED   */</span>
+<span class="token comment">/* #define HAL_RNG_MODULE_ENABLED   */</span>
+<span class="token comment">/* #define HAL_RTC_MODULE_ENABLED   */</span>
+<span class="token comment">/* #define HAL_SAI_MODULE_ENABLED   */</span>
+<span class="token comment">/* #define HAL_SD_MODULE_ENABLED   */</span>
+<span class="token comment">/* #define HAL_MMC_MODULE_ENABLED   */</span>
+<span class="token comment">/* #define HAL_SPI_MODULE_ENABLED   */</span>
+<span class="token comment">/* #define HAL_TIM_MODULE_ENABLED   */</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">HAL_UART_MODULE_ENABLED</span></span>
+<span class="token comment">/* #define HAL_USART_MODULE_ENABLED   */</span>
+<span class="token comment">/* #define HAL_IRDA_MODULE_ENABLED   */</span>
+<span class="token comment">/* #define HAL_SMARTCARD_MODULE_ENABLED   */</span>
+<span class="token comment">/* #define HAL_SMBUS_MODULE_ENABLED   */</span>
+<span class="token comment">/* #define HAL_WWDG_MODULE_ENABLED   */</span>
+<span class="token comment">/* #define HAL_PCD_MODULE_ENABLED   */</span>
+<span class="token comment">/* #define HAL_HCD_MODULE_ENABLED   */</span>
+<span class="token comment">/* #define HAL_DSI_MODULE_ENABLED   */</span>
+<span class="token comment">/* #define HAL_QSPI_MODULE_ENABLED   */</span>
+<span class="token comment">/* #define HAL_QSPI_MODULE_ENABLED   */</span>
+<span class="token comment">/* #define HAL_CEC_MODULE_ENABLED   */</span>
+<span class="token comment">/* #define HAL_FMPI2C_MODULE_ENABLED   */</span>
+<span class="token comment">/* #define HAL_FMPSMBUS_MODULE_ENABLED   */</span>
+<span class="token comment">/* #define HAL_SPDIFRX_MODULE_ENABLED   */</span>
+<span class="token comment">/* #define HAL_DFSDM_MODULE_ENABLED   */</span>
+<span class="token comment">/* #define HAL_LPTIM_MODULE_ENABLED   */</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">HAL_GPIO_MODULE_ENABLED</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">HAL_EXTI_MODULE_ENABLED</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">HAL_DMA_MODULE_ENABLED</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">HAL_RCC_MODULE_ENABLED</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">HAL_FLASH_MODULE_ENABLED</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">HAL_PWR_MODULE_ENABLED</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">HAL_CORTEX_MODULE_ENABLED</span></span>
+</code></pre></div></li></ol></li> <li><p>至此添加驱动的配置就完成了，对于需要使用其他外设，也是如此配置。</p></li></ol></li> <li><p>开始编写代码逻辑</p> <div class="language-c extra-class"><pre class="language-c"><code><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&quot;main.h&quot;</span></span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token comment">// 1. 初始化 HAL 库</span>
+    <span class="token function">HAL_Init</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+    <span class="token comment">// 2. 现在所使用的板子总共有 5 种 GPIO 总线（A、B、C、D、H），GPIO 引脚命名规则，总线号 + 引脚号。只有开启相总线时钟后，才能使用引脚</span>
+    <span class="token function">__HAL_RCC_GPIOA_CLK_ENABLE</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+    GPIO_InitTypeDef GPIO_InitStructure<span class="token punctuation">;</span>
+    <span class="token comment">// 3. LED 相关引脚初始化，现在使用的板子 LED 使用的是 PA5 引脚</span>
+    <span class="token comment">// 选用 A 总线 5 号引脚</span>
+    GPIO_InitStructure<span class="token punctuation">.</span>Pin <span class="token operator">=</span> GPIO_PIN_5<span class="token punctuation">;</span>
+    <span class="token comment">// 选用推挽模式</span>
+	GPIO_InitStructure<span class="token punctuation">.</span>Mode <span class="token operator">=</span> GPIO_MODE_OUTPUT_PP<span class="token punctuation">;</span>
+    <span class="token comment">// 选择 GPIO 的速度</span>
+	GPIO_InitStructure<span class="token punctuation">.</span>Speed <span class="token operator">=</span> GPIO_SPEED_FREQ_HIGH<span class="token punctuation">;</span>
+    
+    <span class="token comment">// GPIOA 表示选用 GPIO A 总线</span>
+    <span class="token function">HAL_GPIO_WritePin</span><span class="token punctuation">(</span>GPIOA<span class="token punctuation">,</span> GPIO_PIN_5<span class="token punctuation">,</span> GPIO_PIN_SET<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+    <span class="token comment">// 将 LED 灯电平拉高，点亮 LED。</span>
+    <span class="token function">HAL_GPIO_WritePin</span><span class="token punctuation">(</span>GPIOA<span class="token punctuation">,</span> GPIO_PIN_5<span class="token punctuation">,</span> GPIO_PIN_SET<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+    <span class="token comment">// 以下死循环是必要的。</span>
+    <span class="token keyword">while</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div></li></ol></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">上次更新:</span> <span class="time">2023年4月22日中午12点16分</span></div></footer> <!----> </main></div><div class="global-ui"><!----><div class="kanbanniang" data-v-5775ee02><div class="banniang-container" style="display:;" data-v-5775ee02><div class="messageBox" style="right:68px;bottom:190px;display:none;" data-v-5775ee02>
+      欢迎来到 Blue Monster
+    </div> <div class="operation" style="right:90px;bottom:40px;display:;" data-v-5775ee02><i class="kbnfont kbn-ban-home ban-home" data-v-5775ee02></i> <i class="kbnfont kbn-ban-message message" data-v-5775ee02></i> <i class="kbnfont kbn-ban-close close" data-v-5775ee02></i> <a target="_blank" href="https://vuepress-theme-reco.recoluan.com/views/plugins/kanbanniang.html" data-v-5775ee02><i class="kbnfont kbn-ban-info info" data-v-5775ee02></i></a> <i class="kbnfont kbn-ban-theme skin" style="display:;" data-v-5775ee02></i></div> <canvas id="banniang" width="150" height="220" class="live2d" style="right:90px;bottom:-20px;opacity:0.9;" data-v-5775ee02></canvas></div> <div class="showBanNiang" style="display:none;" data-v-5775ee02>
+    看板娘
+  </div></div><div class="reco-bgm-panel" data-v-b1d3339e><audio id="bgm" src="/assets/music/Anson Seabra - Last Time.mp3" data-v-b1d3339e></audio> <div class="reco-float-box" style="bottom:30px;z-index:999999;display:none;" data-v-b1d3339e data-v-41bcba48 data-v-b1d3339e><img src="/assets/img/cover/last-time.jpg" data-v-b1d3339e></div> <div class="reco-bgm-box" style="left:10px;bottom:10px;z-index:999999;" data-v-b1d3339e data-v-41bcba48 data-v-b1d3339e><div class="reco-bgm-cover" style="background-image:url(/assets/img/cover/last-time.jpg);" data-v-b1d3339e><div class="mini-operation" style="display:none;" data-v-b1d3339e><i class="reco-bgm reco-bgm-pause" style="display:none;" data-v-b1d3339e></i> <i class="reco-bgm reco-bgm-play" style="display:none;" data-v-b1d3339e></i></div> <div class="falut-message" style="display:none;" data-v-b1d3339e>
+          播放失败
+        </div></div> <div class="reco-bgm-info" data-v-b1d3339e data-v-41bcba48 data-v-b1d3339e><div class="info-box" data-v-b1d3339e><i class="reco-bgm reco-bgm-music music" data-v-b1d3339e></i>Last Time</div> <div class="info-box" data-v-b1d3339e><i class="reco-bgm reco-bgm-artist" data-v-b1d3339e></i>Anson Seabra</div> <div class="reco-bgm-progress" data-v-b1d3339e><div class="progress-bar" data-v-b1d3339e><div class="bar" data-v-b1d3339e></div></div></div> <div class="reco-bgm-operation" data-v-b1d3339e><i class="reco-bgm reco-bgm-last last" data-v-b1d3339e></i> <i class="reco-bgm reco-bgm-pause pause" style="display:none;" data-v-b1d3339e></i> <i class="reco-bgm reco-bgm-play play" data-v-b1d3339e></i> <i class="reco-bgm reco-bgm-next next" data-v-b1d3339e></i> <i class="reco-bgm reco-bgm-volume1 volume" data-v-b1d3339e></i> <i class="reco-bgm reco-bgm-mute mute" style="display:none;" data-v-b1d3339e></i> <div class="volume-bar" data-v-b1d3339e><div class="bar" data-v-b1d3339e></div></div></div></div> <div class="reco-bgm-left-box" data-v-b1d3339e data-v-41bcba48 data-v-b1d3339e><i class="reco-bgm reco-bgm-left" data-v-b1d3339e></i></div></div></div><!----><div id="vuepress-party-cursor" data-v-16fbd2e9></div></div></div>
+    <script src="/assets/js/app.7099126a.js" defer></script><script src="/assets/js/2.0bcf0fe5.js" defer></script><script src="/assets/js/21.b44ed802.js" defer></script><script src="/assets/js/3.94c01751.js" defer></script>
+  </body>
+</html>
