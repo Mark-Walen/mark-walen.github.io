@@ -1,0 +1,1 @@
+import{_ as e,X as t,Y as n,Z as o}from"./framework-a8949fcd.js";const _={},c=o("p",null,"嵌入式入门学习，从这里开始。和我一起从新手小白到 IoT 大牛吧.",-1),s=[c];function r(a,l){return t(),n("div",null,s)}const i=e(_,[["render",r],["__file","index.html.vue"]]);export{i as default};
