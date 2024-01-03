@@ -1,0 +1,1 @@
+import{_ as t,X as a,Y as n,Z as e,$ as s}from"./framework-a8949fcd.js";const c={},o=e("h2",{id:"hey",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#hey","aria-hidden":"true"},"#"),s(" HEY")],-1),r=e("p",null,"介绍什么是实时操作系统",-1),_=[o,r];function d(i,h){return a(),n("div",null,_)}const f=t(c,[["render",d],["__file","index.html.vue"]]);export{f as default};
