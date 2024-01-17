@@ -1,1 +1,0 @@
-import{_ as t,X as a,Y as c,Z as e,$ as s}from"./framework-a8949fcd.js";const n={},r=e("h1",{id:"ble5-stack",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#ble5-stack","aria-hidden":"true"},"#"),s(" BLE5 Stack")],-1),o=[r];function _(d,i){return a(),c("div",null,o)}const h=t(n,[["render",_],["__file","index.html.vue"]]);export{h as default};
